@@ -61,7 +61,7 @@ export default function ProductsPage() {
     return null;
   }
 
-  const products = data?.products || [];
+  const products = (data as any)?.products || [];
   const filteredProducts = products.filter((p: any) => {
     const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          p.category.toLowerCase().includes(searchTerm.toLowerCase());

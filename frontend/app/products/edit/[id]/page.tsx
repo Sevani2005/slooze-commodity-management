@@ -61,13 +61,14 @@ export default function EditProductPage() {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    if (data?.product) {
+    const productData = data as any;
+    if (productData?.product) {
       setFormData({
-        name: data.product.name,
-        category: data.product.category,
-        quantity: data.product.quantity,
-        unitPrice: data.product.unitPrice,
-        status: data.product.status,
+        name: productData.product.name,
+        category: productData.product.category,
+        quantity: productData.product.quantity,
+        unitPrice: productData.product.unitPrice,
+        status: productData.product.status,
       });
     }
   }, [data]);
