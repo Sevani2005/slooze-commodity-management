@@ -1,0 +1,43 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type LoginResponse {
+  accessToken: String!
+  user: User!
+}
+
+type Mutation {
+  createProduct(category: String!, name: String!, quantity: Int!, status: String!, unitPrice: Float!): Product!
+  login(email: String!, password: String!): LoginResponse!
+  removeProduct(id: String!): Product!
+  updateProduct(category: String, id: String!, name: String, quantity: Int, status: String, unitPrice: Float): Product!
+}
+
+type Product {
+  category: String!
+  createdAt: DateTime!
+  id: ID!
+  lastUpdated: DateTime!
+  name: String!
+  quantity: Int!
+  status: String!
+  unitPrice: Float!
+}
+
+type Query {
+  product(id: String!): Product!
+  products: [Product!]!
+}
+
+type User {
+  email: String!
+  id: ID!
+  name: String!
+  role: String!
+}

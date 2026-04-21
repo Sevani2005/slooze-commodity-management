@@ -1,0 +1,27 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       String @id @default(uuid())
+  email    String @unique
+  password String
+  role     String @default("STORE_KEEPER") // "MANAGER" or "STORE_KEEPER"
+  name     String
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  category    String
+  quantity    Int
+  unitPrice   Float
+  status      String   // e.g., "In Stock", "Low Stock", "Out of Stock"
+  lastUpdated DateTime @updatedAt
+  createdAt   DateTime @default(now())
+}

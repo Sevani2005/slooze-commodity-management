@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Slooze Internship Challenge 🚀
 
-## Getting Started
+Hi! This is my project for the Slooze internship selection. I tried to build a clean and simple dashboard to manage commodities, focusing on making it look good and making the different user roles work correctly.
 
-First, run the development server:
+## Getting it started
+I've set up a command to install and run everything at once so you don't have to go into different folders.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Install everything**: 
+   Open your terminal in the main folder and run:
+   ```bash
+   npm run install:all
+   ```
+2. **Run the app**:
+   After that, just run:
+   ```bash
+   npm run dev
+   ```
+   This will start both the frontend (Next.js) and the backend (NestJS) at the same time.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Check it out**:
+   Go to http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Test Accounts
+You can use these two accounts to see how the dashboard changes based on who is logged in:
 
-## Learn More
+**Manager Account** (Can see the dashboard and delete items)
+*   Email: `manager@slooze.com`
+*   Password: `password123`
 
-To learn more about Next.js, take a look at the following resources:
+**Store Keeper Account** (Can only see the inventory and add items)
+*   Email: `keeper@slooze.com`
+*   Password: `password123`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## What I built
+*   **Role-Based Access**: One of the coolest parts I worked on was making the sidebar and buttons change depending on if you are a Manager or a Keeper.
+*   **Inventory CRUD**: You can add, view, and edit products. I also made sure only Managers can delete things.
+*   **Dark Mode**: I added a toggle so you can switch between dark and light themes.
+*   **Tech Stuff**: I used Next.js for the frontend and NestJS with GraphQL for the backend. I also used Prisma with a simple SQLite database.
 
-## Deploy on Vercel
+I had a lot of fun working on this and learned a lot about how to connect a GraphQL backend to a React frontend. Hope you like it!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**[Your Name]**
