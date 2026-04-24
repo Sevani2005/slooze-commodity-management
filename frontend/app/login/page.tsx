@@ -80,7 +80,7 @@ export default function LoginPage() {
               />
             </div>
             <div className="relative">
-              <label htmlFor="password" name="password" className="sr-only">Password</label>
+              <label htmlFor="password" className="sr-only">Password</label>
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-zinc-400">
                 <Lock size={18} />
               </div>
